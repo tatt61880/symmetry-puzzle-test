@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+#title {
+  box-sizing: border-box;
+
+  #title-inner {
+    display: table;
+    width: 100%;
+    height: calc(100svh - 68px);
+  }
+
+  #title-inner-sub {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  & table {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .title-button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 135px;
+    height: 135px;
+    margin: 15px 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    user-select: none;
+    background-color: #ffeedd;
+    border: 6px solid #ffbb77;
+
+    &.title-button-seq {
+      background-color: #ddeeff;
+      border-color: #99ccff;
+    }
+
+    &#button-normal-line,
+    &#button-seq-line {
+      border-radius: 20% 20% 40% 40%;
+    }
+
+    &#button-normal-point,
+    &#button-seq-point {
+      border-radius: 20% 40%;
+    }
+
+    &#button-normal-special,
+    &#button-seq-special {
+      border-radius: 30%;
+    }
+
+    &#button-toggle-to-normal {
+      background-color: #ffeedd;
+      border-color: #ffbb77;
+      border-radius: 20%;
+    }
+
+    &#button-toggle-to-seq {
+      background-color: #ddeeff;
+      border-color: #99ccff;
+      border-radius: 20%;
+    }
+
+    &#button-records,
+    &#button-achievements {
+      font-weight: normal;
+      color: #333388;
+      text-shadow: var(--pseudo-bold-shadow);
+      background-color: #e4e4ff;
+      border-color: #aaaaff;
+      border-radius: 20%;
+    }
+  }
+
+  .title-button-text {
+    font-weight: normal;
+    text-shadow: var(--pseudo-bold-shadow);
+  }
+}

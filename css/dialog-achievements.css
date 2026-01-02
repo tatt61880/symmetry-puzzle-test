@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+#dialog-achievements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 460px;
+  max-height: 618px;
+  padding: 0;
+  margin: 42px auto;
+  border: none;
+  outline: none;
+
+  #dialog-achievements-div {
+    padding: 5px;
+    padding-bottom: 10px;
+  }
+
+  #achievements-top {
+    display: flex;
+    align-items: center;
+
+    & * {
+      margin: 5px;
+    }
+
+    .spacer {
+      flex-grow: 1;
+    }
+
+    .caption {
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #333388;
+      text-shadow: var(--pseudo-bold-shadow);
+    }
+  }
+
+  #achievements-table-div {
+    & table {
+      margin: 5px auto;
+      font-size: 18px;
+      border-collapse: collapse;
+      border: 5px solid #aaaaff;
+    }
+
+    & th,
+    & td {
+      height: 40px;
+      padding: 5px 15px;
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #333388;
+      text-shadow: var(--pseudo-bold-shadow);
+      border: 3px solid #aaaaff;
+
+      & svg {
+        text-shadow: none;
+      }
+
+      & * {
+        vertical-align: middle;
+      }
+    }
+
+    & th {
+      color: #333388;
+      background-color: #e4e4ff;
+    }
+
+    .border-top-bold {
+      border-top-width: 5px;
+    }
+
+    .border-right-bold {
+      border-right-width: 5px;
+    }
+
+    .border-bottom-bold {
+      border-bottom-width: 5px;
+    }
+
+    .achievements-info {
+      width: 330px;
+      height: 80px;
+    }
+  }
+
+  &::backdrop {
+    cursor: pointer;
+    background-color: rgb(0 0 0 / 50%);
+  }
+
+  &,
+  &::backdrop {
+    animation: fade-in-dialog 0.1s ease-out 1 forwards;
+  }
+}
+
+@keyframes fade-in-dialog {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
